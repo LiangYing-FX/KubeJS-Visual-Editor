@@ -1,0 +1,2605 @@
+{
+  "mods": [
+    {
+      "id": "minecraft",
+      "name": "Vanilla",
+      "color": 6269023,
+      "kinds": [
+        {
+          "id": "shaped",
+          "name": "Shaped Crafting",
+          "template": "event.shaped(Item.of({out}, {count}), [{r1}, {r2}, {r3}], { A: {a} })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond_block"
+            },
+            {
+              "key": "count",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "a",
+              "label": "Slot A",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "b",
+              "label": "Slot B",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "c",
+              "label": "Slot C",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "d",
+              "label": "Slot D",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "e",
+              "label": "Slot E",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "f",
+              "label": "Slot F",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "g",
+              "label": "Slot G",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "h",
+              "label": "Slot H",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "i",
+              "label": "Slot I",
+              "type": "ITEM",
+              "def": ""
+            }
+          ]
+        },
+        {
+          "id": "shapeless",
+          "name": "Shapeless Crafting",
+          "template": "event.shapeless(Item.of({out}, {count}), [{inputs}])",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:crafting_table"
+            },
+            {
+              "key": "count",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "inputs",
+              "label": "Addition",
+              "type": "LIST",
+              "def": "",
+              "itemTemplate": "'{v}'"
+            }
+          ]
+        },
+        {
+          "id": "smelting",
+          "name": "Smelting",
+          "template": "event.smelting({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            }
+          ]
+        },
+        {
+          "id": "blasting",
+          "name": "Blasting",
+          "template": "event.blasting({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            }
+          ]
+        },
+        {
+          "id": "smoking",
+          "name": "Smoking",
+          "template": "event.smoking({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:cooked_beef"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:beef"
+            }
+          ]
+        },
+        {
+          "id": "campfire_cooking",
+          "name": "Campfire Cooking",
+          "template": "event.campfireCooking({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:cooked_beef"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:beef"
+            }
+          ]
+        },
+        {
+          "id": "stonecutting",
+          "name": "Stonecutting",
+          "template": "event.stonecutting({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:stone_bricks"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:stone"
+            }
+          ]
+        },
+        {
+          "id": "smithing_transform",
+          "name": "Smithing",
+          "template": "event.smithing({out}, {in2}, {in}, {in3})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:netherite_sword"
+            },
+            {
+              "key": "in",
+              "label": "Base",
+              "type": "ITEM",
+              "def": "minecraft:diamond_sword"
+            },
+            {
+              "key": "in2",
+              "label": "Template",
+              "type": "ITEM",
+              "def": "minecraft:netherite_upgrade_smithing_template"
+            },
+            {
+              "key": "in3",
+              "label": "Addition",
+              "type": "ITEM",
+              "def": "minecraft:netherite_ingot"
+            }
+          ]
+        },
+        {
+          "id": "smithing_trim",
+          "name": "Smithing Trim",
+          "template": "event.smithingTrim({out}, {template}, {base}, {addition})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond_helmet"
+            },
+            {
+              "key": "template",
+              "label": "Template",
+              "type": "ITEM",
+              "def": "minecraft:coast_armor_trim_smithing_template"
+            },
+            {
+              "key": "base",
+              "label": "基础",
+              "type": "ITEM",
+              "def": "minecraft:diamond_helmet"
+            },
+            {
+              "key": "addition",
+              "label": "Addition",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mekanism",
+      "name": "Mekanism",
+      "color": 8084694,
+      "kinds": [
+        {
+          "id": "crushing",
+          "name": "Crushing",
+          "template": "event.recipes.mekanism.crushing(Item.of({out}, {outCount}), Item.of({in}, {inCount}))",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:coal"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            }
+          ]
+        },
+        {
+          "id": "enriching",
+          "name": "Enriching",
+          "template": "event.recipes.mekanism.enriching(Item.of({out}, {outCount}), Item.of({in}, {inCount}))",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:raw_gold"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            }
+          ]
+        },
+        {
+          "id": "smelting",
+          "name": "Smelting",
+          "template": "event.recipes.mekanism.smelting(Item.of({out}, {outCount}), Item.of({in}, {inCount}))",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:raw_iron"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            }
+          ]
+        },
+        {
+          "id": "combining",
+          "name": "Combining",
+          "template": "event.recipes.mekanism.combining(Item.of({out}, {outCount}), Item.of({in}, {inCount}), Item.of({in2}, {in2Count}))",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input A",
+              "type": "ITEM",
+              "def": "minecraft:gold_dust"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in2",
+              "label": "Input B",
+              "type": "ITEM",
+              "def": "minecraft:gold_dust"
+            },
+            {
+              "key": "in2Count",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            }
+          ]
+        },
+        {
+          "id": "compressing",
+          "name": "Compressing",
+          "template": "event.recipes.mekanism.compressing(Item.of({out}, {outCount}), Item.of({in}, {inCount}), {gas})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekanism:ingot_osmium"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "gas",
+              "label": "Gas",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen"
+            }
+          ]
+        },
+        {
+          "id": "purifying",
+          "name": "Purifying",
+          "template": "event.recipes.mekanism.purifying(Item.of({out}, {outCount}), Item.of({in}, {inCount}), {gas})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "gas",
+              "label": "Gas",
+              "type": "TEXT",
+              "def": "mekanism:oxygen"
+            }
+          ]
+        },
+        {
+          "id": "injecting",
+          "name": "Injecting",
+          "template": "event.recipes.mekanism.injecting(Item.of({out}, {outCount}), Item.of({in}, {inCount}), {gas})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekanism:uranium_hexafluoride"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "mekanism:yellowcake"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "gas",
+              "label": "Gas",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen_chloride"
+            }
+          ]
+        },
+        {
+          "id": "metallurgic_infusing",
+          "name": "Metallurgic Infusing",
+          "template": "event.recipes.mekanism.metallurgic_infusing(Item.of({out}, {outCount}), Item.of({in}, {inCount}), {infuse}, {amount})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekanism:alloy_infused"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "infuse",
+              "label": "Infuse Type",
+              "type": "TEXT",
+              "def": "mekanism:carbon"
+            },
+            {
+              "key": "amount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "10"
+            }
+          ]
+        },
+        {
+          "id": "sawing",
+          "name": "Sawing",
+          "template": "event.recipes.mekanism.sawing(Item.of({out}, {outCount}), Item.of({in}, {inCount}), {extra})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:oak_planks"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:oak_log"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "extra",
+              "label": "Extra",
+              "type": "ITEM",
+              "def": "minecraft:oak_sapling"
+            }
+          ]
+        },
+        {
+          "id": "chemical_infusing",
+          "name": "Chemical Infusing",
+          "template": "event.recipes.mekanism.chemical_infusing({out}, {left}, {right})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen_chloride"
+            },
+            {
+              "key": "left",
+              "label": "Left Gas",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen"
+            },
+            {
+              "key": "right",
+              "label": "Right Gas",
+              "type": "TEXT",
+              "def": "mekanism:chlorine"
+            }
+          ]
+        },
+        {
+          "id": "crystallizing",
+          "name": "Crystallizing",
+          "template": "event.recipes.mekanism.crystallizing(Item.of({out}, {outCount}), {gas})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekanism:crystal_osmium"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "gas",
+              "label": "Gas",
+              "type": "TEXT",
+              "def": "mekanism:slurry_osmium"
+            }
+          ]
+        },
+        {
+          "id": "dissolution",
+          "name": "Dissolution",
+          "template": "event.recipes.mekanism.dissolution({gasOut}, {gasIn}, Item.of({in}, {inCount}))",
+          "fields": [
+            {
+              "key": "gasOut",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:slurry_osmium"
+            },
+            {
+              "key": "gasIn",
+              "label": "Input Gas",
+              "type": "TEXT",
+              "def": "mekanism:sulfuric_acid"
+            },
+            {
+              "key": "in",
+              "label": "Item Input",
+              "type": "ITEM",
+              "def": "mekanism:raw_osmium"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            }
+          ]
+        },
+        {
+          "id": "energy_conversion",
+          "name": "Energy Conversion",
+          "template": "event.recipes.mekanism.energy_conversion(Item.of({in}, {inCount}), {out})",
+          "fields": [
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:redstone"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "out",
+              "label": "输出能量",
+              "type": "TEXT",
+              "def": "mekanism:redstone"
+            }
+          ]
+        },
+        {
+          "id": "oxidizing",
+          "name": "Oxidizing",
+          "template": "event.custom({ type: 'mekanism:oxidizing', input: { ingredient: { item: Item.of({in}, {inCount}) } }, output: { gas: {out}, amount: {amount} } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:oxygen"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:water_bucket"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "amount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "washing",
+          "name": "Washing",
+          "template": "event.custom({ type: 'mekanism:washing', fluidInput: { amount: {amount}, fluid: {fluid} }, slurryOutput: { chemicalStack: {out}, amount: 5 }, itemInput: { ingredient: { item: Item.of({in}, {inCount}) } } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Slurry Output",
+              "type": "TEXT",
+              "def": "mekanism:slurry_dirty_iron"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "fluid",
+              "label": "流体",
+              "type": "FLUID",
+              "def": "minecraft:water:5"
+            },
+            {
+              "key": "amount",
+              "label": "Fluid Amount",
+              "type": "NUMBER",
+              "def": "5"
+            }
+          ]
+        },
+        {
+          "id": "activating",
+          "name": "Activating",
+          "template": "event.custom({ type: 'mekanism:activating', input: { amount: {amount}, chemical: {in} }, output: { chemical: {out} } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:plutonium"
+            },
+            {
+              "key": "in",
+              "label": "Input Gas",
+              "type": "TEXT",
+              "def": "mekanism:uranium"
+            },
+            {
+              "key": "amount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "centrifuging",
+          "name": "Centrifuging",
+          "template": "event.custom({ type: 'mekanism:centrifuging', input: { amount: {amount}, chemical: {in} }, output: { chemical: {out} } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:uranium_235"
+            },
+            {
+              "key": "in",
+              "label": "Input Gas",
+              "type": "TEXT",
+              "def": "mekanism: uranium"
+            },
+            {
+              "key": "amount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "separating",
+          "name": "Separating",
+          "template": "event.custom({ type: 'mekanism:separating', input: { amount: {amount}, chemical: {in} }, output: { chemical: {out} } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen"
+            },
+            {
+              "key": "in",
+              "label": "Input Gas",
+              "type": "TEXT",
+              "def": "mekanism:water_vapor"
+            },
+            {
+              "key": "amount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "nucleosynthesizing",
+          "name": "Nucleosynthesizing",
+          "template": "event.custom({ type: 'mekanism:nucleosynthesizing', item_input: { ingredient: { item: Item.of({in}, {inCount}) } }, gas_input: { gas: '{gas}', amount: 200 }, output: { item: Item.of({out}, {outCount}) }, duration: {duration} })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:coal"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "gas",
+              "label": "Gas",
+              "type": "TEXT",
+              "def": "mekanism:antimatter"
+            },
+            {
+              "key": "duration",
+              "label": "Duration (tick)",
+              "type": "NUMBER",
+              "def": "200"
+            }
+          ]
+        },
+        {
+          "id": "painting",
+          "name": "Painting",
+          "template": "event.custom({ type: 'mekanism:painting', chemical_input: { chemical: '{pigment}', amount: 256 }, item_input: { ingredient: { item: Item.of({in}, {inCount}) } }, output: { item: Item.of({out}, {outCount}) }, perceptual: false })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:red_wool"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:white_wool"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "pigment",
+              "label": "Pigment",
+              "type": "TEXT",
+              "def": "mekanism:red"
+            }
+          ]
+        },
+        {
+          "id": "pigment_extracting",
+          "name": "Pigment Extracting",
+          "template": "event.custom({ type: 'mekanism:pigment_extracting', input: { ingredient: { item: Item.of({in}, {inCount}) } }, output: { amount: 768, pigment: '{pigment}' } })",
+          "fields": [
+            {
+              "key": "pigment",
+              "label": "Pigment",
+              "type": "TEXT",
+              "def": "mekanism:red"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:red_tulip"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            }
+          ]
+        },
+        {
+          "id": "pigment_mixing",
+          "name": "Pigment Mixing",
+          "template": "event.custom({ type: 'mekanism:pigment_mixing', left_input: { amount: 256, pigment: '{p1}' }, right_input: { amount: 256, pigment: '{p2}' }, output: { amount: 512, pigment: '{out}' } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output Pigment",
+              "type": "TEXT",
+              "def": "mekanism:orange"
+            },
+            {
+              "key": "p1",
+              "label": "Pigment A",
+              "type": "TEXT",
+              "def": "mekanism:red"
+            },
+            {
+              "key": "p2",
+              "label": "Pigment B",
+              "type": "TEXT",
+              "def": "mekanism:yellow"
+            }
+          ]
+        },
+        {
+          "id": "bin_insert",
+          "name": "Bin Insert",
+          "template": "event.custom({ type: 'mekanism:bin_insert', item_input: { ingredient: { item: Item.of({in}, {inCount}) } }, extra_input: { ingredient: { item: Item.of({in2}, {in2Count}) } }, output: { item: Item.of({out}, {outCount}), count: {count} } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in2",
+              "label": "附加",
+              "type": "ITEM",
+              "def": "minecraft:stone"
+            },
+            {
+              "key": "in2Count",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "count",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            }
+          ]
+        },
+        {
+          "id": "bin_extract",
+          "name": "Bin Extract",
+          "template": "event.custom({ type: 'mekanism:bin_extract', item_input: { ingredient: { item: Item.of({in}, {inCount}) } }, extra_input: { ingredient: { item: Item.of({in2}, {in2Count}) } }, output: { item: Item.of({out}, {outCount}), count: {count} } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "outCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:diamond_block"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "in2",
+              "label": "附加",
+              "type": "ITEM",
+              "def": "minecraft:stone"
+            },
+            {
+              "key": "in2Count",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "count",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "9"
+            }
+          ]
+        },
+        {
+          "id": "chemical_conversion",
+          "name": "Chemical Conversion",
+          "template": "event.custom({ type: 'mekanism:chemical_conversion', input: { ingredient: { item: Item.of({in}, {inCount}) } }, output: { chemical: '{out}', amount: {amount} } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:water_bucket"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "amount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "reaction",
+          "name": "Reaction (PRC)",
+          "template": "event.custom({ type: 'mekanism:reaction', item_input: { ingredient: { item: 'Item.of({in}, {inCount})' } }, fluid_input: { amount: {fluidAmount}, fluid: '{fluid}' }, chemical_input: { chemical: '{gas}', amount: {gasAmount} }, duration: {duration}, item_outputs: {itemOutputs}, chemical_outputs: {gasOutputs} })",
+          "fields": [
+            {
+              "key": "in",
+              "label": "物品输入",
+              "type": "ITEM",
+              "def": "mekanism:raw_osmium"
+            },
+            {
+              "key": "inCount",
+              "label": "Count",
+              "type": "NUMBER",
+              "def": "1"
+            },
+            {
+              "key": "fluid",
+              "label": "流体",
+              "type": "TEXT",
+              "def": "minecraft:water"
+            },
+            {
+              "key": "fluidAmount",
+              "label": "Fluid Amount",
+              "type": "NUMBER",
+              "def": "1000"
+            },
+            {
+              "key": "gas",
+              "label": "Input Gas",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen"
+            },
+            {
+              "key": "gasAmount",
+              "label": "气体量",
+              "type": "NUMBER",
+              "def": "1000"
+            },
+            {
+              "key": "duration",
+              "label": "Duration (tick)",
+              "type": "NUMBER",
+              "def": "200"
+            },
+            {
+              "key": "itemOutputs",
+              "label": "物品输出",
+              "type": "LIST",
+              "def": "",
+              "itemTemplate": "{ item: '{v}', amount: 1 }"
+            },
+            {
+              "key": "gasOutputs",
+              "label": "气体输出",
+              "type": "LIST",
+              "def": "",
+              "itemTemplate": "{ chemical: '{v}', amount: 1000 }"
+            }
+          ]
+        },
+        {
+          "id": "rotary",
+          "name": "Rotary",
+          "template": "event.custom({ type: 'mekanism:rotary', fluid_input: { amount: {amount}, fluid: '{fluid}' }, fluid_output: { fluid: '{out}' }, chemical_output: { chemical: '{gas}' } })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output Fluid",
+              "type": "TEXT",
+              "def": "minecraft:water"
+            },
+            {
+              "key": "gas",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen"
+            },
+            {
+              "key": "fluid",
+              "label": "Input Fluid",
+              "type": "FLUID",
+              "def": "minecraft:water:1000"
+            },
+            {
+              "key": "amount",
+              "label": "Fluid Amount",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "evaporating",
+          "name": "Evaporating",
+          "template": "event.custom({ type: 'mekanism:evaporating', input: { amount: {amount}, fluid: '{fluid}' }, output: { amount: {outAmount}, chemical: '{gas}' } })",
+          "fields": [
+            {
+              "key": "gas",
+              "label": "Output Gas",
+              "type": "TEXT",
+              "def": "mekanism:brine"
+            },
+            {
+              "key": "fluid",
+              "label": "Input Fluid",
+              "type": "FLUID",
+              "def": "minecraft:water:1000"
+            },
+            {
+              "key": "amount",
+              "label": "Input Amount",
+              "type": "NUMBER",
+              "def": "1000"
+            },
+            {
+              "key": "outAmount",
+              "label": "Output Amount",
+              "type": "NUMBER",
+              "def": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "name": "Create",
+      "color": 14263361,
+      "kinds": [
+        {
+          "id": "mixing",
+          "name": "Mixing",
+          "template": "event.recipes.create.mixing({out}, [{in}, {in2}])",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:andesite_alloy"
+            },
+            {
+              "key": "in",
+              "label": "Input A",
+              "type": "ITEM",
+              "def": "minecraft:andesite"
+            },
+            {
+              "key": "in2",
+              "label": "Input B",
+              "type": "ITEM",
+              "def": "minecraft:iron_nugget"
+            }
+          ]
+        },
+        {
+          "id": "compacting",
+          "name": "Compacting",
+          "template": "event.recipes.create.compacting({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:coal_block"
+            }
+          ]
+        },
+        {
+          "id": "crushing",
+          "name": "Crushing",
+          "template": "event.recipes.create.crushing({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "create:crushed_raw_iron"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            }
+          ]
+        },
+        {
+          "id": "cutting",
+          "name": "Cutting",
+          "template": "event.recipes.create.cutting({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "create:iron_sheet"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            }
+          ]
+        },
+        {
+          "id": "pressing",
+          "name": "Pressing",
+          "template": "event.recipes.create.pressing({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "create:iron_sheet"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            }
+          ]
+        },
+        {
+          "id": "milling",
+          "name": "Milling",
+          "template": "event.recipes.create.milling({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "create:crushed_raw_iron"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            }
+          ]
+        },
+        {
+          "id": "splashing",
+          "name": "Washing",
+          "template": "event.recipes.create.splashing({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "create:crushed_raw_iron"
+            }
+          ]
+        },
+        {
+          "id": "haunting",
+          "name": "Haunting",
+          "template": "event.recipes.create.haunting({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:soul_campfire"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:campfire"
+            }
+          ]
+        },
+        {
+          "id": "deploying",
+          "name": "Deploying",
+          "template": "event.recipes.create.deploying({out}, [{in}, {in2}])",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:coal_block"
+            },
+            {
+              "key": "in2",
+              "label": "手持物",
+              "type": "ITEM",
+              "def": "minecraft:sand"
+            }
+          ]
+        },
+        {
+          "id": "sandpaper_polishing",
+          "name": "Sandpaper Polishing",
+          "template": "event.recipes.create.sandpaper_polishing({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:coal_block"
+            }
+          ]
+        },
+        {
+          "id": "filling",
+          "name": "Filling",
+          "template": "event.recipes.create.filling({out}, [Fluid.of('{fluid}', {amount}), {in}])",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:water_bucket"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:bucket"
+            },
+            {
+              "key": "fluid",
+              "label": "流体",
+              "type": "TEXT",
+              "def": "minecraft:water"
+            },
+            {
+              "key": "amount",
+              "label": "Fluid Amount",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "emptying",
+          "name": "Emptying",
+          "template": "event.recipes.create.emptying([Fluid.of('{fluid}', {amount}), {out}], {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Item Output",
+              "type": "ITEM",
+              "def": "minecraft:bucket"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:water_bucket"
+            },
+            {
+              "key": "fluid",
+              "label": "流体",
+              "type": "TEXT",
+              "def": "minecraft:water"
+            },
+            {
+              "key": "amount",
+              "label": "Fluid Amount",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "mechanical_crafting",
+          "name": "Mechanical Crafting",
+          "template": "event.recipes.create.mechanical_crafting({out}, ['{p1}', '{p2}', '{p3}'], { A: {in} })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:emerald"
+            },
+            {
+              "key": "in",
+              "label": "Addition",
+              "type": "ITEM",
+              "def": "minecraft:dirt"
+            },
+            {
+              "key": "p1",
+              "label": "图案行 1",
+              "type": "TEXT",
+              "def": " A "
+            },
+            {
+              "key": "p2",
+              "label": "图案行 2",
+              "type": "TEXT",
+              "def": " A "
+            },
+            {
+              "key": "p3",
+              "label": "图案行 3",
+              "type": "TEXT",
+              "def": " A "
+            }
+          ]
+        },
+        {
+          "id": "item_application",
+          "name": "Item Application",
+          "template": "event.recipes.create.item_application({out}, [{in}, {in2}])",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:grass_block"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:dirt"
+            },
+            {
+              "key": "in2",
+              "label": "应用物",
+              "type": "ITEM",
+              "def": "minecraft:grass_block"
+            }
+          ]
+        },
+        {
+          "id": "sequenced_assembly",
+          "name": "Sequenced Assembly",
+          "template": "event.recipes.create.sequenced_assembly([{out}], {in}, [{steps}]).transitionalItem('{transitional}').loops({loops})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Main Output",
+              "type": "ITEM",
+              "def": "create:precision_mechanism"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "create:golden_sheet"
+            },
+            {
+              "key": "transitional",
+              "label": "Transitional Item",
+              "type": "ITEM",
+              "def": "create:incomplete_precision_mechanism"
+            },
+            {
+              "key": "loops",
+              "label": "Loops",
+              "type": "NUMBER",
+              "def": "5"
+            },
+            {
+              "key": "steps",
+              "label": "Steps",
+              "type": "NESTED",
+              "def": "",
+              "subKinds": [
+                "create:pressing",
+                "create:deploying",
+                "create:filling",
+                "create:cutting"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ae2",
+      "name": "Applied Energistics 2",
+      "color": 4886484,
+      "kinds": [
+        {
+          "id": "charger",
+          "name": "Charger",
+          "template": "AE2Recipes.charger({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "ae2:charged_certus_quartz_crystal"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "ae2:certus_quartz_crystal"
+            }
+          ]
+        },
+        {
+          "id": "inscriber",
+          "name": "Inscriber",
+          "template": "AE2Recipes.inscriber({out}, {in}, {in2}, '{mode}')",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "ae2:printed_silicon"
+            },
+            {
+              "key": "in",
+              "label": "Top",
+              "type": "ITEM",
+              "def": "ae2:silicon_press"
+            },
+            {
+              "key": "in2",
+              "label": "Bottom",
+              "type": "ITEM",
+              "def": "minecraft:silicon"
+            },
+            {
+              "key": "mode",
+              "label": "Mode",
+              "type": "ENUM",
+              "def": "inscribe",
+              "options": [
+                "inscribe",
+                "press"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modern_industrialization",
+      "name": "Modern Industrialization",
+      "color": 13193039,
+      "kinds": [
+        {
+          "id": "machine",
+          "name": "Machine Recipe",
+          "template": "event.custom({ type: 'modern_industrialization:machine', item_inputs: [{ item: {in}, amount: 1 }], item_outputs: [{ item: {out}, amount: 1 }], eu: {eu}, duration: {duration} })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "modern_industrialization:steel_ingot"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "eu",
+              "label": "EU/t",
+              "type": "NUMBER",
+              "def": "4"
+            },
+            {
+              "key": "duration",
+              "label": "耗时(tick)",
+              "type": "NUMBER",
+              "def": "200"
+            }
+          ]
+        },
+        {
+          "id": "forge_hammer",
+          "name": "Forge Hammer",
+          "template": "event.custom({ type: 'modern_industrialization:forge_hammer', item_inputs: [{ item: {in}, amount: 1 }], item_outputs: [{ item: {out}, amount: 1 }] })",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_plate"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evolvedmekanism",
+      "name": "Evolved Mekanism",
+      "color": 9067734,
+      "kinds": [
+        {
+          "id": "alloying",
+          "name": "Alloying",
+          "template": "event.recipes.evolvedmekanism.alloying({out}, {in}, {in2}, {in3})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekanism:alloy_reinforced"
+            },
+            {
+              "key": "in",
+              "label": "Main Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "in2",
+              "label": "Extra Input",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            },
+            {
+              "key": "in3",
+              "label": "Second Extra",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            }
+          ]
+        },
+        {
+          "id": "chemixing",
+          "name": "Chemical Mixing",
+          "template": "event.recipes.evolvedmekanism.chemixing({out}, {in}, {in2}, '{gas}')",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekanism:alloy_atomic"
+            },
+            {
+              "key": "in",
+              "label": "Main Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "in2",
+              "label": "Extra Input",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            },
+            {
+              "key": "gas",
+              "label": "Chemical",
+              "type": "TEXT",
+              "def": "mekanism:oxygen"
+            }
+          ]
+        },
+        {
+          "id": "melting",
+          "name": "Melting",
+          "template": "event.recipes.evolvedmekanism.melting(Fluid.of('{fluid}', {amount}), {in})",
+          "fields": [
+            {
+              "key": "fluid",
+              "label": "Output Fluid",
+              "type": "TEXT",
+              "def": "minecraft:lava"
+            },
+            {
+              "key": "amount",
+              "label": "Amount",
+              "type": "NUMBER",
+              "def": "1000"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:cobblestone"
+            }
+          ]
+        },
+        {
+          "id": "solidifying",
+          "name": "Solidifying",
+          "template": "event.recipes.evolvedmekanism.solidifying({out}, {in}, Fluid.of('{fluid}', {amount}), Fluid.of('{extra}', {extraAmount}))",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:obsidian"
+            },
+            {
+              "key": "in",
+              "label": "Item Input",
+              "type": "ITEM",
+              "def": "minecraft:stone"
+            },
+            {
+              "key": "fluid",
+              "label": "Fluid Input",
+              "type": "TEXT",
+              "def": "minecraft:water"
+            },
+            {
+              "key": "amount",
+              "label": "Fluid Amount",
+              "type": "NUMBER",
+              "def": "1000"
+            },
+            {
+              "key": "extra",
+              "label": "Extra Fluid",
+              "type": "TEXT",
+              "def": "minecraft:lava"
+            },
+            {
+              "key": "extraAmount",
+              "label": "Extra Amount",
+              "type": "NUMBER",
+              "def": "100"
+            }
+          ]
+        },
+        {
+          "id": "apt",
+          "name": "Anti-Protonic Nucleosynthesizer",
+          "template": "event.recipes.evolvedmekanism.apt({out}, {in}, '{gas}')",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:coal"
+            },
+            {
+              "key": "gas",
+              "label": "Chemical",
+              "type": "TEXT",
+              "def": "mekanism:antimatter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mekanismsun",
+      "name": "Mekanism Sun",
+      "color": 14064220,
+      "kinds": [
+        {
+          "id": "alloying",
+          "name": "Alloying",
+          "template": "event.recipes.mekanismsun.alloying({out}, {in}, {in2}, '{gas}')",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekanism:alloy_atomic"
+            },
+            {
+              "key": "in",
+              "label": "Main Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "in2",
+              "label": "Extra Input",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            },
+            {
+              "key": "gas",
+              "label": "Chemical",
+              "type": "TEXT",
+              "def": "mekanism:hydrogen"
+            }
+          ]
+        },
+        {
+          "id": "assemble",
+          "name": "Assemble",
+          "template": "event.recipes.mekanismsun.assemble({out}, {in}, {in2}, '{gas}')",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            },
+            {
+              "key": "in",
+              "label": "Main Input",
+              "type": "ITEM",
+              "def": "minecraft:coal"
+            },
+            {
+              "key": "in2",
+              "label": "Extra Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "gas",
+              "label": "Chemical",
+              "type": "TEXT",
+              "def": "mekanism:oxygen"
+            }
+          ]
+        },
+        {
+          "id": "transmutation",
+          "name": "Transmutation",
+          "template": "event.recipes.mekanismsun.transmutation({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mekmm",
+      "name": "MekMM",
+      "color": 6068950,
+      "kinds": [
+        {
+          "id": "lathe",
+          "name": "Lathe",
+          "template": "event.recipes.mekmm.lathe({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekmm:iron_rod"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            }
+          ]
+        },
+        {
+          "id": "rolling_mill",
+          "name": "Rolling Mill",
+          "template": "event.recipes.mekmm.rolling_mill({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekmm:iron_plate"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            }
+          ]
+        },
+        {
+          "id": "recycler",
+          "name": "Recycler",
+          "template": "event.recipes.mekmm.recycler({out}, {in}, {chance})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_nugget"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "chance",
+              "label": "Chance",
+              "type": "NUMBER",
+              "def": "0.5"
+            }
+          ]
+        },
+        {
+          "id": "stamper",
+          "name": "Stamper",
+          "template": "event.recipes.mekmm.stamper({out}, {in}, {mold})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "mekmm:iron_plate"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "mold",
+              "label": "Mold",
+              "type": "ITEM",
+              "def": "mekmm:plate_mold"
+            }
+          ]
+        },
+        {
+          "id": "planting",
+          "name": "Planting",
+          "template": "event.recipes.mekmm.planting({out}, {in}, '{gas}', {tick})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:wheat"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:wheat_seeds"
+            },
+            {
+              "key": "gas",
+              "label": "Chemical",
+              "type": "TEXT",
+              "def": "mekanism:oxygen"
+            },
+            {
+              "key": "tick",
+              "label": "Per Tick Usage",
+              "type": "BOOL",
+              "def": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "occultism",
+      "name": "Occultism",
+      "color": 10247382,
+      "kinds": [
+        {
+          "id": "crushing",
+          "name": "Crushing",
+          "template": "event.recipes.occultism.crushing({out}, {in}, {time}, {minTier}, {maxTier}, false)",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Result",
+              "type": "ITEM",
+              "def": "occultism:crushed_iron"
+            },
+            {
+              "key": "in",
+              "label": "Ingredient",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "time",
+              "label": "Crushing Time",
+              "type": "NUMBER",
+              "def": "200"
+            },
+            {
+              "key": "minTier",
+              "label": "Min Tier",
+              "type": "NUMBER",
+              "def": "0"
+            },
+            {
+              "key": "maxTier",
+              "label": "Max Tier",
+              "type": "NUMBER",
+              "def": "4"
+            }
+          ]
+        },
+        {
+          "id": "miner",
+          "name": "Miner",
+          "template": "event.recipes.occultism.miner({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Result",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "in",
+              "label": "Ingredient",
+              "type": "ITEM",
+              "def": "minecraft:stone"
+            }
+          ]
+        },
+        {
+          "id": "spirit_fire",
+          "name": "Spirit Fire",
+          "template": "event.recipes.occultism.spirit_fire({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Result",
+              "type": "ITEM",
+              "def": "occultism:spirit_attuned_gem"
+            },
+            {
+              "key": "in",
+              "label": "Ingredient",
+              "type": "ITEM",
+              "def": "minecraft:diamond"
+            }
+          ]
+        },
+        {
+          "id": "spirit_trade",
+          "name": "Spirit Trade",
+          "template": "event.recipes.occultism.spirit_trade({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Result",
+              "type": "ITEM",
+              "def": "minecraft:emerald"
+            },
+            {
+              "key": "in",
+              "label": "Ingredient",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enderio",
+      "name": "EnderIO",
+      "color": 6060758,
+      "kinds": [
+        {
+          "id": "alloy_smelting",
+          "name": "Alloy Smelting",
+          "template": "event.recipes.enderio.alloy_smelting({out}, [{in}, {in2}], {energy}, {xp}, false)",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "enderio:conductive_alloy_ingot"
+            },
+            {
+              "key": "in",
+              "label": "Input A",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "in2",
+              "label": "Input B",
+              "type": "ITEM",
+              "def": "minecraft:gold_ingot"
+            },
+            {
+              "key": "energy",
+              "label": "Energy",
+              "type": "NUMBER",
+              "def": "5000"
+            },
+            {
+              "key": "xp",
+              "label": "Experience",
+              "type": "NUMBER",
+              "def": "0.5"
+            }
+          ]
+        },
+        {
+          "id": "sag_milling",
+          "name": "SAG Milling",
+          "template": "event.recipes.enderio.sag_milling([{out}], {in}, {energy}, {bonus})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_dust"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "energy",
+              "label": "Energy",
+              "type": "NUMBER",
+              "def": "2400"
+            },
+            {
+              "key": "bonus",
+              "label": "Bonus",
+              "type": "NUMBER",
+              "def": "0"
+            }
+          ]
+        },
+        {
+          "id": "slicing",
+          "name": "Slicing",
+          "template": "event.recipes.enderio.slicing({out}, [{in}], {energy})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:iron_nugget"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "energy",
+              "label": "Energy",
+              "type": "NUMBER",
+              "def": "1000"
+            }
+          ]
+        },
+        {
+          "id": "painting",
+          "name": "Painting",
+          "template": "event.recipes.enderio.painting({out}, {in})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:white_wool"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:wool"
+            }
+          ]
+        },
+        {
+          "id": "enchanting",
+          "name": "Enchanting",
+          "template": "event.recipes.enderio.enchanting('{ench}', {in}, {cost})",
+          "fields": [
+            {
+              "key": "ench",
+              "label": "Enchantment",
+              "type": "TEXT",
+              "def": "minecraft:sharpness"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:diamond_sword"
+            },
+            {
+              "key": "cost",
+              "label": "Cost Multiplier",
+              "type": "NUMBER",
+              "def": "1"
+            }
+          ]
+        },
+        {
+          "id": "vat_fermenting",
+          "name": "VAT Fermenting",
+          "template": "event.recipes.enderio.vat_fermenting({out}, {in}, '{left}', '{right}', {ticks})",
+          "fields": [
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "minecraft:slime_ball"
+            },
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:slime_block"
+            },
+            {
+              "key": "left",
+              "label": "Left Reagent",
+              "type": "TEXT",
+              "def": "enderio:nutrient_distillation"
+            },
+            {
+              "key": "right",
+              "label": "Right Reagent",
+              "type": "TEXT",
+              "def": "minecraft:water"
+            },
+            {
+              "key": "ticks",
+              "label": "Ticks",
+              "type": "NUMBER",
+              "def": "200"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "powah",
+      "name": "Powah",
+      "color": 14048410,
+      "kinds": [
+        {
+          "id": "energizing",
+          "name": "Energizing",
+          "template": "event.recipes.powah.energizing([{in1}, {in2}, {in3}, {in4}, {in5}, {in6}], {out}, {energy})",
+          "fields": [
+            {
+              "key": "in1",
+              "label": "Input 1",
+              "type": "ITEM",
+              "def": "minecraft:iron_ingot"
+            },
+            {
+              "key": "in2",
+              "label": "Input 2",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "in3",
+              "label": "Input 3",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "in4",
+              "label": "Input 4",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "in5",
+              "label": "Input 5",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "in6",
+              "label": "Input 6",
+              "type": "ITEM",
+              "def": ""
+            },
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "powah:crystal_blazing"
+            },
+            {
+              "key": "energy",
+              "label": "Energy",
+              "type": "NUMBER",
+              "def": "50000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oritech",
+      "name": "Oritech",
+      "color": 6084288,
+      "kinds": [
+        {
+          "id": "pulverizer",
+          "name": "Pulverizer",
+          "template": "event.recipes.oritech.pulverizer([{in}], [{out}], [], [], {time})",
+          "fields": [
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "oritech:iron_dust"
+            },
+            {
+              "key": "time",
+              "label": "Time",
+              "type": "NUMBER",
+              "def": "100"
+            }
+          ]
+        },
+        {
+          "id": "grinder",
+          "name": "Grinder",
+          "template": "event.recipes.oritech.grinder([{in}], [{out}], [], [], {time})",
+          "fields": [
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "oritech:iron_dust"
+            },
+            {
+              "key": "time",
+              "label": "Time",
+              "type": "NUMBER",
+              "def": "100"
+            }
+          ]
+        },
+        {
+          "id": "assembler",
+          "name": "Assembler",
+          "template": "event.recipes.oritech.assembler([{in}], [{out}], [], [], {time})",
+          "fields": [
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "oritech:iron_dust"
+            },
+            {
+              "key": "time",
+              "label": "Time",
+              "type": "NUMBER",
+              "def": "100"
+            }
+          ]
+        },
+        {
+          "id": "centrifuge",
+          "name": "Centrifuge",
+          "template": "event.recipes.oritech.centrifuge([{in}], [{out}], [], [], {time})",
+          "fields": [
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "oritech:iron_dust"
+            },
+            {
+              "key": "time",
+              "label": "Time",
+              "type": "NUMBER",
+              "def": "100"
+            }
+          ]
+        },
+        {
+          "id": "atomic_forge",
+          "name": "Atomic Forge",
+          "template": "event.recipes.oritech.atomic_forge([{in}], [{out}], [], [], {time})",
+          "fields": [
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "oritech:iron_dust"
+            },
+            {
+              "key": "time",
+              "label": "Time",
+              "type": "NUMBER",
+              "def": "100"
+            }
+          ]
+        },
+        {
+          "id": "deep_drill",
+          "name": "Deep Drill",
+          "template": "event.recipes.oritech.deep_drill([{in}], [{out}], [], [], {time})",
+          "fields": [
+            {
+              "key": "in",
+              "label": "Input",
+              "type": "ITEM",
+              "def": "minecraft:iron_ore"
+            },
+            {
+              "key": "out",
+              "label": "Output",
+              "type": "ITEM",
+              "def": "oritech:iron_dust"
+            },
+            {
+              "key": "time",
+              "label": "Time",
+              "type": "NUMBER",
+              "def": "100"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

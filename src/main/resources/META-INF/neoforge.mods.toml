@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="kubejs_editor"
+version="0.1.0"
+displayName="KubeJS Visual Editor"
+logoFile="icon.png"
+authors="LiangYing_FX"
+description="In-game visual editor that writes KubeJS server scripts."
+
+[[dependencies.kubejs_editor]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.kubejs_editor]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"

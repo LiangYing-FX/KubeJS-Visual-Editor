@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+version = '0.1.0'
+group = 'dev.dsh.kjseditor'
+base { archivesName = 'kubejs-editor' }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    maven { url = uri('https://maven.blamejared.com') }
+    maven { url = uri('https://bmclapi2.bangbang93.com/maven/') }
+    mavenCentral()
+    maven { url = uri('https://libraries.minecraft.net/') }
+}
+
+dependencies {
+    // optional at runtime: only loaded when JEI is installed
+    compileOnly('mezz.jei:jei-1.21.1-common-api:19.69.0.457') { transitive = false }
+    compileOnly('mezz.jei:jei-1.21.1-neoforge-api:19.69.0.457') { transitive = false }
+}
+
+// Workaround: NFRT's JDK javac trips over net/minecraft/world/ticks/package-info.java
+// ("Line: 1 ... null"), while ECJ compiles the same sources fine.
+neoFormRuntime {
+    useEclipseCompiler = true
+}
+
+neoForge {
+    version = '21.1.264'
+    runs {
+        client { client() }
+    }
+    mods {
+        kubejs_editor { sourceSet sourceSets.main }
+    }
+}

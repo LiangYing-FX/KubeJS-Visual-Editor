@@ -1,0 +1,7 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { url = uri('https://bmclapi2.bangbang93.com/maven/') }
+    }
+}
+rootProject.name = 'kubejs-editor'
